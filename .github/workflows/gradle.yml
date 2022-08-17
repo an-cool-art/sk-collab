@@ -26,3 +26,9 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+
+      - name: Upload debug APK with minApi 26
+        uses: actions/upload-artifact@v3
+        with:
+          name: apk-minApi26-debug
+          path: app/build/outputs/apk/minApi26/debug
